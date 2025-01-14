@@ -7,7 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        OrderBook orderBook = new OrderBook();
+        MatchingEngine matchingEngine = new MatchingEngineFIFO();
+        OrderBook orderBook = new OrderBook(matchingEngine);
         createExampleOrders(orderBook);
 
         while (true) {
